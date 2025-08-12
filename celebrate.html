@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+    <style>
+ #flag{
+  width:200px;
+  position:absolute;
+  animation:moveUp 20s linear forwards ;
+
+  }
+@keyframes moveUp {
+  0%{bottom:0;}
+  100%{bottom: 60%;}
+}
+
+body{
+background:url('/15 August /Screenshot_20250812-151847~2.png');
+background-size:cover;
+}
+#stand{
+  margin-left: -80px;
+}
+button{
+  padding:8px; 
+background:pink;
+color: white;
+border:1px solid black;
+border-radius: 100px;
+margin-left: 400px;
+
+}
+}
+  </style>
+</head>
+
+<body>
+      <div class="btndiv">
+      <button  onclick="Start()">Play National Anthem  🫡</button>
+        <button style="background:red; margin-top:5px; border-radius:10px;" onclick="Stop()">Stop National Anthem</button>
+        
+      </div>
+<div style="flex">
+   <img id="stand" src="/15 August /Screenshot_20250812-135933~5.png"/>
+    <img id="flag" src="/15 August /Screenshot_20250812-155856~3.png" alt=" तिरंगा"/>
+      <audio  id="audio" src="/15 August /national-anthem.mp3" ></audio>
+      </div>
+
+
+  
+    <script>
+    let audio=document.getElementById("audio")
+   function Start(){
+    audio.play()
+   }
+   function Stop(){
+    audio.pause()
+   }
+  </script>
+</body>
+
+</html>
